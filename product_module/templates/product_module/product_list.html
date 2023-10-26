@@ -1,0 +1,312 @@
+{% extends 'shared/_layout.html' %}
+
+
+{% block title %}
+    لیست محصولات
+{% endblock %}
+
+{% block content %}
+    <main>
+
+        <div class="breadcrumb-items">
+            <div class="row">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="index.html" class="breadcrumb-link">صفحه اصلی</a>
+                    </li>
+                    <li class="chevron"><span class="fa fa-chevron-left"></span></li>
+                    <li>
+                    </li>
+                    <li>
+                        <span class="breadcrumb-active">دسته بندی کتب</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="slider-area">
+                        <div class="slider-height2 slider-bg4 d-flex align-items-center">
+                            <div class="hero-caption hero-caption2">
+                                <h2>دسته بندی موضوعی</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="listing-area pt-50 pb-50">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+
+                        <div class="category-listing mb-50">
+
+                            <div class="single-listing">
+
+                                <div class="select-Categories pb-30">
+                                    <div class="small-tittle mb-20">
+                                        <h4>دسته بندی</h4>
+                                    </div>
+                                    <label class="container">تاریخی
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">روانشناسی
+                                        <input type="checkbox" checked="checked active">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">رمان عاشقانه
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">علوم سیاسی
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">بیوگرافی
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+
+
+                                <aside class="left_widgets p_filter_widgets price_rangs_aside sidebar_box_shadow mb-40">
+                                    <div class="small-tittle">
+                                        <h4>فیلتر قیمت</h4>
+                                    </div>
+                                    <div class="widgets_inner">
+                                        <div class="range_item">
+                                            <span class="irs js-irs-0"><span class="irs"><span class="irs-line"
+                                                                                               tabindex="-1"><span
+                                                    class="irs-line-left"></span><span class="irs-line-mid"></span><span
+                                                    class="irs-line-right"></span></span><span class="irs-min"
+                                                                                               style="visibility: hidden;">$ 0</span><span
+                                                    class="irs-max" style="visibility: hidden;">$ 1.000</span><span
+                                                    class="irs-from"
+                                                    style="visibility: visible; left: 0%;">$ 0</span><span
+                                                    class="irs-to"
+                                                    style="visibility: visible; left: 27.7778%;">$ 500</span><span
+                                                    class="irs-single"
+                                                    style="visibility: hidden; left: 0%;">$ 0 - $ 500</span></span><span
+                                                    class="irs-grid"></span><span class="irs-bar"
+                                                                                  style="left: 5.55556%; width: 44.4444%;"></span><span
+                                                    class="irs-shadow shadow-from" style="display: none;"></span><span
+                                                    class="irs-shadow shadow-to" style="display: none;"></span><span
+                                                    class="irs-slider from" style="left: 0%;"></span><span
+                                                    class="irs-slider to type_last"
+                                                    style="left: 44.4444%;"></span></span><input type="text"
+                                                                                                 class="js-range-slider irs-hidden-input"
+                                                                                                 value="" readonly="">
+                                            <div class="d-flex align-items-center">
+                                                <div class="price_value d-flex justify-content-center">
+                                                    <input type="text" class="js-input-from" id="amount" readonly="">
+                                                    <span>تا</span>
+                                                    <input type="text" class="js-input-to" id="amount" readonly="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </aside>
+
+
+                                <div class="select-job-items2 mb-30">
+                                    <div class="col-xl-12">
+                                        <select name="select2" style="display: none;">
+                                            <option value="">فیلتر براساس امتیاز</option>
+                                            <option value="">5 ستاره</option>
+                                            <option value="">4 ستاره</option>
+                                            <option value="">3 ستاره</option>
+                                            <option value="">2 ستاره</option>
+                                            <option value="">1 ستاره</option>
+                                        </select>
+                                        <div class="nice-select" tabindex="0"><span
+                                                class="current">فیلتر براساس امتیاز</span>
+                                            <ul class="list">
+                                                <li data-value="" class="option selected">فیلتر براساس امتیاز</li>
+                                                <li data-value="" class="option">5 ستاره</li>
+                                                <li data-value="" class="option">4 ستاره</li>
+                                                <li data-value="" class="option">3 ستاره</li>
+                                                <li data-value="" class="option">2 ستاره</li>
+                                                <li data-value="" class="option">1 ستاره</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="select-Categories pt-100 pb-60">
+                                    <div class="small-tittle mb-20">
+                                        <h4>فیلتر انتشارات</h4>
+                                    </div>
+                                    <label class="container">انتشارات اول
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">انتشارات دوم
+                                        <input type="checkbox" checked="checked active">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">انتشارات سوم
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">انتشارات چهارم
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">انتشارات پنجم
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+
+
+                                <div class="select-Categories">
+                                    <div class="small-tittle mb-20">
+                                        <h4>فیلتر نویسنده</h4>
+                                    </div>
+                                    <label class="container">سون وون پیونگ
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">باربارا دی آنجلیس
+                                        <input type="checkbox" checked="checked active">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">پائولو کولینو
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">مت هیگ
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container">بزرگمهر برخیده
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-8 col-lg-8 col-md-6">
+                        <div class="row justify-content-end">
+                            <div class="col-xl-4">
+                                <div class="product_page_tittle">
+                                    <div class="short_by">
+                                        <select name="#" id="product_short_list" style="display: none;">
+                                            <option>مرتب سازی براساس محبوبیت</option>
+                                            <option>مرتب سازی براساس نام</option>
+                                            <option>مرتب سازی براساس جدیدترین</option>
+                                            <option>مرتب سازی براساس قدیمی ترین</option>
+                                            <option>مرتب سازی براساس قیمت</option>
+                                        </select>
+                                        <div class="nice-select" tabindex="0"><span class="current">مرتب سازی براساس قدیمی ترین</span>
+                                            <ul class="list">
+                                                <li data-value="مرتب سازی براساس محبوبیت" class="option">مرتب سازی
+                                                    براساس محبوبیت
+                                                </li>
+                                                <li data-value="مرتب سازی براساس نام" class="option focus">مرتب سازی
+                                                    براساس نام
+                                                </li>
+                                                <li data-value="مرتب سازی براساس جدیدترین" class="option">مرتب سازی
+                                                    براساس جدیدترین
+                                                </li>
+                                                <li data-value="مرتب سازی براساس قدیمی ترین" class="option selected">
+                                                    مرتب سازی براساس قدیمی ترین
+                                                </li>
+                                                <li data-value="مرتب سازی براساس قیمت" class="option">مرتب سازی براساس
+                                                    قیمت
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="best-selling p-0">
+                            <div class="row">
+
+                                {% for product in products %}
+                                    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-12 col-sm-6">
+                                        <div class="properties pb-30">
+                                            <div class="properties-card">
+                                                <div class="properties-img">
+                                                    <a href="book-details.html"><img
+                                                            src="{{ product.image.url }}"
+                                                            alt=""></a>
+                                                </div>
+                                                <div class="properties-caption properties-caption2">
+                                                    <h3><a href="book-details.html">{{ product.title }}</a></h3>
+                                                    {% if product.auther %}
+                                                        <p><a href="#">{{ product.authered }}</a></p>
+
+                                                    {% endif %}
+                                                    <div class="properties-footer d-flex justify-content-between align-items-center">
+                                                        {% comment %}<div class="review">
+                                                            <div class="rating">
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star-half-alt"></i>
+                                                            </div>{% endcomment %}
+                                                            {% comment %}<p>(<span>12</span> نظر)</p>{% endcomment %}
+                                                        </div>
+                                                        <div class="price">
+                                                            <p>{{ product.price }}<span>تومان</span></p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="more-btn text-center mt-15">
+                                    <a href="#" class="border-btn border-btn2 more-btn2">مشاهده کتب بیشتر</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        {% comment %}<section class="subscribe-area">
+            <div class="container">
+                <div class="subscribe-caption text-center subscribe-padding section-img2-bg"
+                     data-background="img/bg/newsletter-bg.jpg"
+                     style="background-image: url(&quot;/static/img/bg/newsletter-bg.jpg&quot;);">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-8 col-md-9">
+                            <h3>خبرنامه کابانا</h3>
+                            <p>هر ماه یک کتاب الکترونیکی رایگان به ایمیل اعضای خبرنامه ارسال می گردد.</p>
+                            <form action="#">
+                                <input type="text" placeholder="ایمیل">
+                                <button class="subscribe-btn">عضویت در خبرنامه</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>{% endcomment %}
+
+    </main>
+{% endblock %}

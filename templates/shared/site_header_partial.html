@@ -1,0 +1,230 @@
+<div class="header-area">
+    <div class="main-header ">
+        <div class="header-top ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="d-flex justify-content-between align-items-center flex-sm">
+                            <div class="header-info-left d-flex align-items-center">
+
+                                <div class="logo">
+                                    <a href="index.html"><img src="/static/img/logo/logo.png" alt=""></a>
+                                </div>
+
+                                <form action="#" class="form-box">
+                                    <input type="text" name="Search"
+                                           placeholder="جستجوی کتاب براساس نویسنده یا انتشارات">
+                                    <div class="search-icon">
+                                        <i class="ti-search"></i>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="header-info-right d-flex align-items-center">
+                                <ul>
+                                    <li><a href="#">راهنما</a></li>
+                                    <li><a href="#">پیگیری سفارشات</a></li>
+                                    <li class="shopping-card">
+                                        <a href="cart.html"><img src="/static/img/icon/cart.svg" alt=""></a>
+                                    </li>
+                                    <li><a href="login.html" class="btn header-btn">ورود</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom  header-sticky">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-12">
+
+                        <div class="logo2">
+                            <a href="index.html"><img src="/static/img/logo/logo.png" alt=""></a>
+                        </div>
+
+                        <div class="main-menu text-center d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation" class="menu">
+                                    <li><a href="{% url 'index_page' %}">صفحه اصلی</a></li>
+
+                                    <li><a href="#">دسته بندی موضوعی</a>
+
+                                        <div class="megadrop">
+                                            <div class="mega-head">
+                                                <div class="col">
+                                                    <ul>
+                                                        <li><a href="categories.html">تاریخی</a>
+                                                        </li>
+                                                        <li><a href="categories.html">جغرافیا</a>
+                                                        </li>
+                                                        <li><a href="categories.html">اجتماعی</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li><a href="categories.html">ورزشی</a>
+                                                        </li>
+                                                        <li><a href="categories.html">پزشکی</a>
+                                                        </li>
+                                                        <li><a href="categories.html">روانشناسی</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li><a href="categories.html">علمی</a>
+                                                        </li>
+                                                        <li><a href="categories.html">سینما و تئاتر</a>
+                                                        </li>
+                                                        <li><a href="categories.html">رمان و داستان</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li><a href="categories.html">فلسفه</a>
+                                                        </li>
+                                                        <li><a href="categories.html">آموزشی</a>
+                                                        </li>
+                                                        <li><a href="categories.html">دینی و مذهبی</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mega-foot">
+                                                <div class="col-12">
+                                                    <a href="author.html">صفحه نویسندگان</a>
+                                                    <a href="publisher.html">صفحه ناشران</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">صفحات</a>
+                                        <ul class="submenu">
+
+                                            <li><a href="cart.html">سبد خرید</a></li>
+                                            <li><a href="checkout.html">تسویه حساب</a></li>
+                                            <li><a href="categories.html">دسته بندی</a></li>
+                                            <li><a href="author.html">نویسندگان</a></li>
+                                            <li><a href="publisher.html">ناشران</a></li>
+                                            <li><a href="book-details.html">جزئیات کتاب</a></li>
+                                            <li><a href="author-details.html">جزئیات نویسنده</a></li>
+                                            <li><a href="publisher-details.html">جزئیات ناشر</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="about.html">درباره ما</a></li>
+                                    <li><a href="contact.html">تماس با ما</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12">
+                        <div class="mobile_menu d-block d-lg-none">
+                            <div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0"
+                                                          class="slicknav_btn slicknav_collapsed"
+                                                          style="outline: none;"><span
+                                    class="slicknav_menutxt">منو</span><span class="slicknav_icon"><span
+                                    class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span
+                                    class="slicknav_icon-bar"></span></span></a>
+                                <ul class="slicknav_nav slicknav_hidden" style="display: none;" aria-hidden="true"
+                                    role="menu">
+                                    <li><a href="index.html" role="menuitem" tabindex="-1">صفحه اصلی</a></li>
+
+                                    <li><a href="#" role="menuitem" tabindex="-1">دسته بندی موضوعی</a>
+
+                                        <div class="megadrop">
+                                            <div class="mega-head">
+                                                <div class="col">
+                                                    <ul>
+                                                        <li><a href="categories.html" role="menuitem" tabindex="-1">تاریخی</a>
+                                                        </li>
+                                                        <li><a href="categories.html" role="menuitem" tabindex="-1">جغرافیا</a>
+                                                        </li>
+                                                        <li><a href="categories.html" role="menuitem" tabindex="-1">اجتماعی</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li><a href="categories.html" role="menuitem" tabindex="-1">ورزشی</a>
+                                                        </li>
+                                                        <li><a href="categories.html" role="menuitem" tabindex="-1">پزشکی</a>
+                                                        </li>
+                                                        <li><a href="categories.html" role="menuitem" tabindex="-1">روانشناسی</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li><a href="categories.html" role="menuitem"
+                                                               tabindex="-1">علمی</a>
+                                                        </li>
+                                                        <li><a href="categories.html" role="menuitem" tabindex="-1">سینما
+                                                            و تئاتر</a>
+                                                        </li>
+                                                        <li><a href="categories.html" role="menuitem" tabindex="-1">رمان
+                                                            و داستان</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li><a href="categories.html" role="menuitem" tabindex="-1">فلسفه</a>
+                                                        </li>
+                                                        <li><a href="categories.html" role="menuitem" tabindex="-1">آموزشی</a>
+                                                        </li>
+                                                        <li><a href="categories.html" role="menuitem" tabindex="-1">دینی
+                                                            و مذهبی</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mega-foot">
+                                                <div class="col-12">
+                                                    <a href="author.html" tabindex="-1">صفحه نویسندگان</a>
+                                                    <a href="publisher.html" tabindex="-1">صفحه ناشران</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="blog.html" role="menuitem" tabindex="-1">وبلاگ</a></li>
+                                    <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem"
+                                                                                      aria-haspopup="true" tabindex="-1"
+                                                                                      class="slicknav_item slicknav_row"
+                                                                                      style="outline: none;"><a href="#"
+                                                                                                                tabindex="-1">صفحات</a>
+                                        <span class="slicknav_arrow">+</span></a>
+                                        <ul class="submenu slicknav_hidden" role="menu" style="display: none;"
+                                            aria-hidden="true">
+                                            <li><a href="login.html" role="menuitem" tabindex="-1">ورود</a></li>
+                                            <li><a href="cart.html" role="menuitem" tabindex="-1">سبد خرید</a></li>
+                                            <li><a href="checkout.html" role="menuitem" tabindex="-1">تسویه حساب</a>
+                                            </li>
+                                            <li><a href="categories.html" role="menuitem" tabindex="-1">دسته بندی</a>
+                                            </li>
+                                            <li><a href="author.html" role="menuitem" tabindex="-1">نویسندگان</a></li>
+                                            <li><a href="publisher.html" role="menuitem" tabindex="-1">ناشران</a></li>
+                                            <li><a href="book-details.html" role="menuitem" tabindex="-1">جزئیات
+                                                کتاب</a></li>
+                                            <li><a href="blog-details.html" role="menuitem" tabindex="-1">جزئیات
+                                                وبلاگ</a></li>
+                                            <li><a href="author-details.html" role="menuitem" tabindex="-1">جزئیات
+                                                نویسنده</a></li>
+                                            <li><a href="publisher-details.html" role="menuitem" tabindex="-1">جزئیات
+                                                ناشر</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="about.html" role="menuitem" tabindex="-1">درباره ما</a></li>
+                                    <li><a href="contact.html" role="menuitem" tabindex="-1">تماس با ما</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

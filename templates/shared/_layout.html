@@ -1,0 +1,39 @@
+{% load render_partial %}
+
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from demo.sitranet.com/kabana/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Sep 2023 14:15:12 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> {% block title %}{% endblock %} </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% render_partial 'home_module.views.site_header_references' %}
+
+</head>
+
+<body>
+
+{% render_partial 'home_module.views.site_header_partial' %}
+
+{% block content %}{% endblock %}
+
+
+{% render_partial 'home_module.views.site_footer_partial' %}
+
+<div id="back-top">
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+{% render_partial 'home_module.views.site_footer_references' %}
+
+</body>
+
+
+<!-- Mirrored from demo.sitranet.com/kabana/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Sep 2023 14:15:32 GMT -->
+</html>
