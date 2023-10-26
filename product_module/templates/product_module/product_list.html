@@ -241,14 +241,14 @@
                                         <div class="properties pb-30">
                                             <div class="properties-card">
                                                 <div class="properties-img">
-                                                    <a href="book-details.html"><img
+                                                    <a href="{% url 'product_detail_page' slug=product.slug %}"><img
                                                             src="{{ product.image.url }}"
                                                             alt=""></a>
                                                 </div>
                                                 <div class="properties-caption properties-caption2">
-                                                    <h3><a href="book-details.html">{{ product.title }}</a></h3>
+                                                    <h3><a href="{% url 'product_detail_page' slug=product.slug %}">{{ product.title }}</a></h3>
                                                     {% if product.auther %}
-                                                        <p><a href="#">{{ product.authered }}</a></p>
+                                                        <p><a href="{% url 'product_detail_page' slug=product.slug %}">{{ product.authered }}</a></p>
 
                                                     {% endif %}
                                                     <div class="properties-footer d-flex justify-content-between align-items-center">
