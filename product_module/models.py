@@ -41,7 +41,7 @@ class Product(models.Model):
     price = models.IntegerField(verbose_name='قیمت')
     amount_folio = models.IntegerField(verbose_name='تعداد صفحات')
     image = models.ImageField(upload_to='image/product', null=True, blank=True, verbose_name='تصویر')
-    image_2 = models.ImageField(upload_to='image/product', null=True, blank=True, verbose_name='تصویر')
+    image_2 = models.ImageField(upload_to='image/product', null=True, blank=True, verbose_name='تصویر پشت کتاب')
     auther = models.CharField(max_length=100,null=True, blank=True , verbose_name='نویسنده اش')
     publisher = models.CharField(max_length=100, null=True, blank=True, verbose_name='انتشارات')
     dragoman = models.CharField(max_length=100, null=True, blank=True, verbose_name='مترجم')
@@ -50,6 +50,8 @@ class Product(models.Model):
                                       verbose_name='دسته بندی')
     is_active = models.BooleanField(default=False, verbose_name='فعال / غیر فعال')
     is_delete = models.BooleanField(default=False, verbose_name='حذف شده / موجود')
+    publish_year = models.IntegerField(db_index=True, null=True, blank=True, verbose_name='سال انتشار')
+    shebak = models.CharField(max_length=18,null=True, blank=True, verbose_name='شابک')
     # add rating field...
 
     def get_absolute_url(self):
