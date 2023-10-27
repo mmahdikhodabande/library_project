@@ -37,6 +37,7 @@
 
                                 <div class="single-book d-flex align-items-center mb-0">
                                     <div class="book-img">
+                                        <img src="{{ product.image_2.url }}" width="300" alt="">
                                         <img src="{{ product.image.url }}" width="300" alt="">
                                         {% comment %}<img src="/static/img/book/best-books1-details.jpg" alt="">{% endcomment %}
                                     </div>
@@ -54,7 +55,7 @@
                                             <p>(<span>12</span> نظر)</p>
                                         </div>
 
-                                        <p>نویسنده: <a href="#" target="_self">{{ product.authered }}</a></p>
+                                        <p>نویسنده: <a href="#" target="_self">{{ product.auther }}</a></p>
                                         <p>مترجم: {{ product.dragoman }} </p>
                                         <p>ناشر: <a href="#" target="_self">{{ product.publisher }}</a></p>
                                         <div class="price">
@@ -87,8 +88,8 @@
                                 <div class="nav nav-tabs " id="nav-tab" role="tablist">
                                     <a class="nav-link active" id="nav-one-tab" data-bs-toggle="tab" href="#nav-one"
                                        role="tab" aria-controls="nav-one" aria-selected="true">توضیحات</a>
-                                    <a class="nav-link" id="nav-two-tab" data-bs-toggle="tab" href="#nav-two" role="tab"
-                                       aria-controls="nav-two" aria-selected="false">درباره نویسنده</a>
+                                    {% comment %}<a class="nav-link" id="nav-two-tab" data-bs-toggle="tab" href="#nav-two" role="tab"
+                                       aria-controls="nav-two" aria-selected="false">درباره نویسنده</a>{% endcomment %}
                                     <a class="nav-link" id="nav-three-tab" data-bs-toggle="tab" href="#nav-three"
                                        role="tab" aria-controls="nav-three" aria-selected="false">مشخصات کتاب</a>
                                     <a class="nav-link" id="nav-four-tab" data-bs-toggle="tab" href="#nav-four"
@@ -107,50 +108,13 @@
 
                         <div class="row">
                             <div class="desc-tab offset-xl-1 col-lg-9">
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                    گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
-                                    برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
-                                    می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
-                                    متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-                                    الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
-                                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان
-                                    مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
-                                    طراحی اساسا مورد استفاده قرار گیرد.</p>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                    گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
-                                    برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
-                                    می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
-                                    متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-                                    الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
-                                    داشت که تمام </p>
+                                <p> {{ product.description }} </p>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="nav-two" role="tabpanel" aria-labelledby="nav-two-tab">
 
-                        <div class="row">
-                            <div class="author-img">
-                                <img src="/static/img/author/barbara.jpg" alt="">
-                            </div>
-                            <div class="author-tab offset-xl-1 col-lg-9">
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                    گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
-                                    برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
-                                    می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
-                                    متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-                                    الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
-                                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان
-                                    مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
-                                    طراحی اساسا مورد استفاده قرار گیرد.</p>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                    گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
-                                    برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
-                                    می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
-                                    متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-                                    الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
-                                    داشت که تمام </p>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="tab-pane fade" id="nav-three" role="tabpanel" aria-labelledby="nav-three-tab">
 
@@ -160,45 +124,39 @@
                                     <thead>
                                     <tr>
                                         <th class="first">نام کتاب</th>
-                                        <th class="second">رهایی<br></th>
+                                        <th class="second">{{ product.title }}<br></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <td class="first">نویسنده</td>
-                                        <td class="second">ویرجینیا وولف</td>
+                                        <td class="second">{{ product.auther }}</td>
                                     </tr>
                                     <tr>
                                         <td class="first">مترجم</td>
-                                        <td class="second">صبا راستگار</td>
+                                        <td class="second">{{ product.dragoman }}</td>
                                     </tr>
                                     <tr>
                                         <td class="first">ناشر</td>
-                                        <td class="second">انتشارات کتاب سرای نیک</td>
+                                        <td class="second">{{ product.publisher }}</td>
                                     </tr>
                                     <tr>
                                         <td class="first">سال انتشار</td>
-                                        <td class="second">1398</td>
+                                        <td class="second">{{ product.publish_year }}</td>
                                     </tr>
-                                    <tr>
-                                        <td class="first">فرمت کتاب</td>
-                                        <td class="second">چاپی</td>
-                                    </tr>
+
                                     <tr>
                                         <td class="first">تعداد صفحات</td>
-                                        <td class="second">152</td>
+                                        <td class="second">{{ product.amount_folio }}</td>
                                     </tr>
-                                    <tr>
-                                        <td class="first">زبان</td>
-                                        <td class="second">فارسی</td>
-                                    </tr>
+
                                     <tr>
                                         <td class="first">شابک</td>
-                                        <td class="second">978-600-8957-97-3</td>
+                                        <td class="second">{{ product.shebak }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="first">موضوع کتاب</td>
-                                        <td class="second">ادبیات جهان</td>
+                                        <td class="first">دسته بندی کتاب</td>
+                                        <td class="second">{{ product }}</td>
                                     </tr>
                                     </tbody>
                                 </table>

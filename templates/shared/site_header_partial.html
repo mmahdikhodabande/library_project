@@ -40,13 +40,15 @@
                     <div class="col-xl-12">
 
                         <div class="logo2">
-                            <a href="index.html"><img src="/static/img/logo/logo.png" alt=""></a>
+                            <a href="{% url 'index_page' %}"><img src="/static/img/logo/logo.png" alt=""></a>
                         </div>
 
                         <div class="main-menu text-center d-none d-lg-block">
                             <nav>
                                 <ul id="navigation" class="menu">
                                     <li><a href="{% url 'index_page' %}">صفحه اصلی</a></li>
+
+                                    <li><a href="{% url 'product_list_page' %}"> محصولات </a></li>
 
                                     <li><a href="#">دسته بندی موضوعی</a>
 
@@ -93,12 +95,6 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="mega-foot">
-                                                <div class="col-12">
-                                                    <a href="author.html">صفحه نویسندگان</a>
-                                                    <a href="publisher.html">صفحه ناشران</a>
-                                                </div>
-                                            </div>
                                         </div>
                                     </li>
                                     <li><a href="#">صفحات</a>
@@ -109,13 +105,12 @@
                                             <li><a href="categories.html">دسته بندی</a></li>
                                             <li><a href="author.html">نویسندگان</a></li>
                                             <li><a href="publisher.html">ناشران</a></li>
-                                            <li><a href="book-details.html">جزئیات کتاب</a></li>
                                             <li><a href="author-details.html">جزئیات نویسنده</a></li>
                                             <li><a href="publisher-details.html">جزئیات ناشر</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="about.html">درباره ما</a></li>
-                                    <li><a href="contact.html">تماس با ما</a></li>
+                                    <li><a href="{% url 'contact_us_page' %}">تماس با ما</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -131,7 +126,9 @@
                                     class="slicknav_icon-bar"></span></span></a>
                                 <ul class="slicknav_nav slicknav_hidden" style="display: none;" aria-hidden="true"
                                     role="menu">
-                                    <li><a href="index.html" role="menuitem" tabindex="-1">صفحه اصلی</a></li>
+                                    <li><a href="{% url 'index_page' %}" role="menuitem" tabindex="-1">صفحه اصلی</a></li>
+
+
 
                                     <li><a href="#" role="menuitem" tabindex="-1">دسته بندی موضوعی</a>
 
