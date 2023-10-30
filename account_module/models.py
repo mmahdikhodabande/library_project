@@ -10,10 +10,11 @@ class User(AbstractUser):
     active_code = models.CharField(max_length=100, verbose_name='کد فعالسازی')
     address = models.CharField(max_length=150, verbose_name='آدرس')
     about_user = models.TextField(null=True, blank=True, verbose_name='درباره شخص')
+    phone_number = models.IntegerField(null=True, blank=True, unique=True, verbose_name='شماره تماس')
 
     def __str__(self):
-        if self.first_name:
-            return self.get_full_name()
+        if self.username:
+            return self.username
         return self.email
 
     class Meta:
