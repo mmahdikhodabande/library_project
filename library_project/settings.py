@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home_module',
     'product_module',
     'contact_module',
+    'order_module'
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,9 @@ AUTH_USER_MODEL = 'account_module.User'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Email service
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sendofemailforyou@gmail.com'
+EMAIL_HOST_PASSWORD = 'dohmsfqiocziygix'
+EMAIL_PORT = 587

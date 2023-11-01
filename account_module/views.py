@@ -1,5 +1,5 @@
 from django.contrib.auth import login, logout
-from django.http import HttpRequest
+from django.http import HttpRequest, Http404
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -7,8 +7,9 @@ from django.urls import reverse
 from django.utils.crypto import get_random_string
 from django.views import View
 
-from account_module.forms import RegisterForm, LoginForm
+from account_module.forms import RegisterForm, LoginForm, ForgotPasswordForm, ResetPasswordForm
 from account_module.models import User
+from utils.email_service import send_email
 
 
 class RegisterView(View):
@@ -36,7 +37,7 @@ class RegisterView(View):
                     username=user_email)
                 new_user.set_password(user_password)
                 new_user.save()
-                # send_email('فعالسازی حساب کاربری', new_user.email, {'user': new_user}, 'emails/activate_account.html')
+                send_email('فعالسازی حساب کاربری', new_user.email, {'user': new_user}, 'emails/activate_account.html')
                 return redirect(reverse('login_page'))
 
         context = {
@@ -86,3 +87,77 @@ class LogoutView(View):
     def get(self, request):
         logout(request)
         return redirect(reverse('login_page'))
+
+
+class ForgetPasswordView(View):
+    def get(self, request: HttpRequest):
+        forget_pass_form = ForgotPasswordForm()
+        context = {'forget_pass_form': forget_pass_form}
+        return render(request, 'account_module/forgot_password.html', context)
+
+    def post(self, request: HttpRequest):
+        forget_pass_form = ForgotPasswordForm(request.POST)
+        if forget_pass_form.is_valid():
+            user_email = forget_pass_form.cleaned_data.get('email')
+            user: User = User.objects.filter(email__iexact=user_email).first()
+            if user is not None:
+                send_email('بازیابی کلمه عبور', user.email, {'user': user}, 'emails/forgot_password.html')
+                forget_pass_form.add_error('email',
+                                           'جهت تغییر رمز عبور لینک حاوی تغییر رمز عبور به ایمیل شما ارسال شده است')
+            else:
+                forget_pass_form.add_error('email', 'ایمیل وارد شده در سایت ثبت نام یا وارد نشده است ! ')
+
+        context = {'forget_pass_form': forget_pass_form}
+        return render(request, 'account_module/forgot_password.html', context)
+
+
+class ResetPasswordView(View):
+    def get(self, request: HttpRequest, code_active):
+        user: User = User.objects.filter(active_code__iexact=code_active).first()
+        if user is None:
+            return redirect(reverse('login_page'))
+
+        reset_pass_form = ResetPasswordForm()
+
+        context = {
+            'reset_pass_form': reset_pass_form,
+            'user': user
+        }
+        return render(request, 'account_module/reset_password.html', context)
+
+    def post(self, request: HttpRequest, code_active):
+        reset_pass_form = ResetPasswordForm(request.POST)
+        user: User = User.objects.filter(active_code__iexact=code_active).first()
+        if reset_pass_form.is_valid():
+            if user is None:
+                return redirect(reverse('login_page'))
+            user_new_pass = reset_pass_form.cleaned_data.get('password')
+            user.set_password(user_new_pass)
+            user.active_code = get_random_string(72)
+            user.is_active = True
+            user.save()
+            return redirect(reverse('login_page'))
+
+        context = {
+            'reset_pass_form': reset_pass_form,
+            'user': user
+        }
+
+        return render(request, 'account_module/reset_password.html', context)
+
+
+class ActivateAccountView(View):
+    def get(self, request, active_code):
+        user: User = User.objects.filter(active_code__iexact=active_code).first()
+        if user is not None:
+            if not user.is_active:
+                user.is_active = True
+                user.active_code = get_random_string(72)
+                user.save()
+                # todo: show success message to user
+                return redirect(reverse('login_page'))
+            else:
+                # todo: show your account was activated message to user
+                pass
+
+        raise Http404

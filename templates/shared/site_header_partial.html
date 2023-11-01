@@ -24,7 +24,7 @@
                                     <li><a href="#">راهنما</a></li>
                                     <li><a href="#">پیگیری سفارشات</a></li>
                                     <li class="shopping-card">
-                                        <a href="cart.html"><img src="/static/img/icon/cart.svg" alt=""></a>
+                                        <a href="{% url 'add_to_order_page' %}"><img src="/static/img/icon/cart.svg" alt=""></a>
                                     </li>
                                     <li><a href="{% url 'login_page' %}" class="btn header-btn">ورود</a></li>
                                 </ul>
@@ -196,11 +196,11 @@
                                         <span class="slicknav_arrow">+</span></a>
                                         <ul class="submenu slicknav_hidden" role="menu" style="display: none;"
                                             aria-hidden="true">
-                                            <li><a href="login.html" role="menuitem" tabindex="-1">ورود</a></li>
+                                            <li><a href="{% url 'login_page' %}" role="menuitem" tabindex="-1">ورود</a></li>
                                             <li><a href="cart.html" role="menuitem" tabindex="-1">سبد خرید</a></li>
                                             <li><a href="checkout.html" role="menuitem" tabindex="-1">تسویه حساب</a>
                                             </li>
-                                            <li><a href="categories.html" role="menuitem" tabindex="-1">دسته بندی</a>
+                                            <li><a href="categories.html" role  ="menuitem" tabindex="-1">دسته بندی</a>
                                             </li>
                                             <li><a href="author.html" role="menuitem" tabindex="-1">نویسندگان</a></li>
                                             <li><a href="publisher.html" role="menuitem" tabindex="-1">ناشران</a></li>

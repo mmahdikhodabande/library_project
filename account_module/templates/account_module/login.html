@@ -3,44 +3,36 @@
     ورود کاربر
 {% endblock %}
 {% block content %}
-    <div class="login-form-area">
-        <div class="login-form">
+    <form method="post" action="{% url 'login_page' %}">
+    {% csrf_token %}
+        <div class="login-form-area">
+            <div class="login-form">
 
-            <div class="login-heading">
-                <span>ورود</span>
-                <p>برای دسترسی به سایت وارد شوید</p>
-            </div>
+                <div class="login-heading">
+                    <span>ورود</span>
+                    <p>برای دسترسی به سایت وارد شوید</p>
+                </div>
 
-            <div class="input-box">
-                <form method="post" action="{% url 'login_page' %}">
-                    {%  csrf_token %}
-                    {{ login_form.email.label_tag }}
-                    {{ login_form.email }}
-                    {{ login_form.email.errors }}
-                    {{ login_form.password.label_tag }}
-                    {{ login_form.password }}
-                    {{ login_form.password.errors }}
-
-
-                    {#                <div class="single-input-fields">#}
-                    {#                    <label>نام کاربری یا ایمیل</label>#}
-                    {#                    <input type="text" placeholder="نام کاربری / ایمیل">#}
-                    {#                </div>#}
-                    {#                <div class="single-input-fields">#}
-                    {#                    <label>رمز عبور</label>#}
-                    {#                    <input type="password" placeholder="رمز عبور">#}
-                    {#                </div>#}
+                <div class="input-box">
+                    <div class="single-input-fields">
+                        <label>نام کاربری یا ایمیل</label>
+                        {{login_form.email}}
+                    </div>
+                    <div class="single-input-fields">
+                        <label>رمز عبور</label>
+                        {{login_form.password}}
+                    </div>
                     <div class="single-input-fields login-check">
-                        <a href="#" class="f-right">رمز خود را فراموش کرده اید؟</a>
+                        <a href="{% url 'forget_pass' %}" class="f-right">رمز خود را فراموش کرده اید؟</a>
                     </div>
-                    <div class="login-footer">
-                        <p>حساب کاربری ندارید؟ <a href="{% url 'register_page' %}">ثبت نام</a> کنید.</p>
-                        <button class="submit-btn3">ورود</button>
-                    </div>
-                </form>
+                </div>
+
+                <div class="login-footer">
+                    <p>حساب کاربری ندارید؟ <a href="{% url 'register_page' %}">ثبت نام</a> کنید.</p>
+                    <button class="submit-btn3">ورود</button>
+                </div>
             </div>
-
-
         </div>
-    </div>
+    </form>
+
 {% endblock %}
