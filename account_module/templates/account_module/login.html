@@ -4,7 +4,7 @@
 {% endblock %}
 {% block content %}
     <form method="post" action="{% url 'login_page' %}">
-    {% csrf_token %}
+        {% csrf_token %}
         <div class="login-form-area">
             <div class="login-form">
 
@@ -16,11 +16,13 @@
                 <div class="input-box">
                     <div class="single-input-fields">
                         <label>نام کاربری یا ایمیل</label>
-                        {{login_form.email}}
+                        {{ login_form.email }}
+                        {{ login_form.email.errors }}
                     </div>
                     <div class="single-input-fields">
                         <label>رمز عبور</label>
-                        {{login_form.password}}
+                        {{ login_form.password }}
+                        {{ login_form.password.errors }}
                     </div>
                     <div class="single-input-fields login-check">
                         <a href="{% url 'forget_pass' %}" class="f-right">رمز خود را فراموش کرده اید؟</a>

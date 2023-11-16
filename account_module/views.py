@@ -1,5 +1,6 @@
 from django.contrib.auth import login, logout
-from django.http import HttpRequest, Http404
+from django.core.exceptions import ValidationError
+from django.http import HttpRequest, Http404, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -27,6 +28,9 @@ class RegisterView(View):
             user_email = register_form.cleaned_data.get('email')
             user_password = register_form.cleaned_data.get('password')
             user: bool = User.objects.filter(email__iexact=user_email).exists()
+            len_pass: int = len(list(user_password))
+            # if len_pass < 4 or len_pass > 12:
+            #     raise ValidationError(f'Length of the name:{len_pass} is not between 10 -20 characters')
             if user:
                 register_form.add_error('email', 'ایمیل وارد شده تکراری می باشد')
             else:
@@ -62,6 +66,7 @@ class LoginView(View):
             user_email = login_form.cleaned_data.get('email')
             user_pass = login_form.cleaned_data.get('password')
             user: User = User.objects.filter(email__iexact=user_email).first()
+            print(login_form)
             if user is not None:
                 if not user.is_active:
                     login_form.add_error('email',
